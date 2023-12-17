@@ -1,11 +1,11 @@
 import React from "react";
-import BottonList from "./BottonList";
+import ButtonList from "./ButtonList";
 import VideoContainer from "./VideoContainer";
 
 const MainContainer = () => {
   return (
-    <div>
-      <BottonList />
+    <div className="col-span-12">
+      <ButtonList />
       <VideoContainer />
     </div>
   );
