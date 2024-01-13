@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { useState } from "react";
 import { YOUTUBE_SEARCH_API } from "../utils/contants";
+import icon from "../assets/magnifying-glass-solid.svg";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -45,17 +46,18 @@ const Header = () => {
       <div className="col-span-10">
         <input
           type="text"
-          placeholder="Search"
-          className="w-1/2 rounded-l-2xl py-1 px-3 border border-gray-700"
+          placeholder=" Search"
+          className="w-1/3 rounded-l-2xl py-1 px-3 border border-gray-700"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           // onFocus={() => setShowSuggestions(true)}
           // onBlur={() => setShowSuggestions(false)}
         />
 
-        <button className=" p-1 rounded-r-lg">Search</button>
+        <button className=" w-9 p-1 rounded-r-2xl  h-8  ">
+          <img src={icon} alt="search Icon" />
+        </button>
       </div>
-
       <div>
         <img
           className="h-8 col-span-1"
